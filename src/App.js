@@ -79,7 +79,7 @@ const CabeceraResultados = (props) => {
   for (let i=1 ; i<= props.numPlayers; i++) {
     players.push('Player'+i)
   }
-
+ 
   return (
     <thead>
       <tr>
@@ -91,13 +91,22 @@ const CabeceraResultados = (props) => {
             </th>
           )
         }
+        <th>Ganador</th>
       </tr>
     </thead>
   )
 }
 const LineaResultados = (props) => {
+  let maxNumber = Math.max.apply(null,props.dices)
   let numPlayers = props.dices.length
-
+  let winner = ''
+  let arrayWinner = []
+  for (let i=0 ; i< numPlayers; i++) {
+    if(maxNumber === props.dices[i] )
+    arrayWinner.push('Player' + (i + 1))
+  }
+  winner = arrayWinner.join(', ')
+ 
   return (
     <tr>
       <td>{props.drops}</td>
@@ -108,6 +117,7 @@ const LineaResultados = (props) => {
           }</td>
         )
       }
+      <td>{winner}</td>
     </tr>
   )
 }
