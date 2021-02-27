@@ -25,6 +25,15 @@ function App() {
       setDices([])
     } 
 
+    const ResetButton = () => {
+      if(dices.length) 
+          return  (
+            <button onClick={reset}> Empezar de nuevo </button>
+          )
+      else
+          return (null )
+      }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -32,7 +41,7 @@ function App() {
           Haga clic en tirar dado para comenzar
         </p>
         <button onClick={tirar}> Tirar dados </button>
-        <button onClick={reset}> Empezar de nuevo </button>
+        <ResetButton/>
       </header>
       <main>
         <Resultados dices = {dices}
