@@ -28,6 +28,44 @@
   color: #61dafb;
 }
 
+table {
+  width: 40%;
+  margin-left:auto; 
+  margin-right:auto;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+th {
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px solid #c8c8c8;
+  font-size: 14px;
+background-color: rgb(238, 238, 238);
+}
+td {
+margin: 20px 0;
+  padding: 10px;
+  border: 1px solid #c8c8c8;
+  font-size: 14px;
+}
+button {
+line-height: 1.4em;
+cursor: pointer;
+  -webkit-appearance: button;
+  *overflow: visible;
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
